@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="form.css">
+  <link rel="icon" href="img/pg/WhatsApp Image 2024-04-29 à 18.36.19_cd6fd2e1.jpg">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="section">
+
+    <main class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="text">CHAGU MOVIES</a>
+      </div>
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="film.html">Movies</a>
+        <a href="Contact us.html">Contact us</a>
+      </div>
+      <div class="nav-right">
+        <img src="" alt="">
+      </div>
+    </main>
+  </div>
+<!---login form-->
+<div class="container">
+  <div class="row full-height justify-content-center">
+    <div class="col-12 text-center align-self-center py-5">
+      <div class="section pb-5 pt-5 pt-sm-2 text-center">
+        <h6 class="mb-0 pb-3"><span>Log In</span><span>Sign Up</span></h6>
+        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+        <label for="reg-log"></label>
+        <div class="card-3d-wrap mx-auto">
+          <div class="card-3d-wrapper">
+            <!-- Login Form -->
+            <div class="card-front">
+              <div class="center-wrap">
+                <div class="section text-center">
+                  <h4 class="pb-3">Log In</h4>
+                  <form action="login.php" method="POST">
+                    <div class="form-group">
+                      <input type="email" name="email_login" class="form-style" placeholder="Email" required />
+                      <i class="input-icon uil uil-at"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" name="password_login" class="form-style" placeholder="Password" required />
+                      <i class="input-icon uil uil-lock-alt"></i>
+                    </div>
+                    <button type="submit" class="btn mt-4" id="Login">Login</button>
+                    <div class="form-group mt-2">
+                      <p>Or</p>
+                      <a href="https://www.facebook.com/" class="btn" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://mail.google.com/" class="btn" target="_blank"><i class="fab fa-google"></i></a>
+                      <a href="https://github.com/" class="btn" target="_blank"><i class="fab fa-github" ></i></a>
+                    </div>
+                    <p class="mb-0 mt-4 text-center">
+                      <a href="Contact us.html" class="link">Forgot your password?</a>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Register Form -->
+            <div class="card-back">
+              <div class="center-wrap">
+                <div class="section text-center">
+                  <h4 class="mb-3 pb-3">Sign Up</h4>
+                  <form action="register.php" method="POST">
+                    <div class="form-group">
+                      <input type="text" name="full_name" class="form-style" placeholder="Full Name" required />
+                      <i class="input-icon uil uil-user"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="tel" name="phone_number" class="form-style" placeholder="Phone Number" required />
+                      <i class="input-icon uil uil-phone"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="email" name="email_register" class="form-style" placeholder="Email" required />
+                      <i class="input-icon uil uil-at"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" name="password_register" class="form-style" placeholder="Password" required />
+                      <i class="input-icon uil uil-lock-alt"></i>
+                    </div>
+                    <button type="submit" class="btn mt-4" id="register">Register</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<!-- scripte retation de form -->
+<script>
+  function switchToRegister() {
+      const checkbox = document.getElementById("reg-log");
+      if (checkbox) {
+          checkbox.checked = true;
+      }
+  }
+  </script>
+  
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link rel="icon" href="img/pg/WhatsApp Image 2024-04-29 à 18.36.19_cd6fd2e1.jpg">
+    <link rel="stylesheet" href="ajouter_supprimer_film.css">
+</head>
+<body>
+    <header>
+        <main class="navbar">
+                    <div class="nav-left">
+                        <a href="index.html">CHAGU MOVIES</a>
+                    </div>
+                    <div class="nav-center">
+                        <a href="index.html">Home</a>
+                        <a href="film.html">Movies</a>
+                        <a href="Contact us.html">Contact us</a>
+                    </div>
+                    <div class="nav-right">
+                        <span id="login-logout-container"></span>
+                    </div>
+        </main>
+    </header>
+<div class="container">
+    <!-- Bloc à gauche pour ajouter ou modifier un film -->
+
+    <!-- <input type="checkbox" id="form-toggle" class="checkbox" />
+    <label for="form-toggle"></label> -->
+    
+    <div class="form-container">
+        <h1 id="addmod">Ajouter un Film</h1>
+        
+        <form id="addFilmForm">
+            <label for="image">Importer une Image :</label><br>
+            <input type="file" id="image" name="image" accept="img/pster/"><br><br>
+            <label for="name">Nom du Film:</label><br>
+            <input type="text" id="name" placeholder="Nom"><br><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" placeholder="Description" rows="4" cols="50" maxlength="10000"></textarea><br><br>
+            <button type="button" id="addFilmButton">Ajouter le Film</button>
+            <input type="hidden" id="filmId"> <!-- ID caché pour identifier le film à modifier -->
+        </form>
+        <br>
+        <!-- Formulaire pour supprimer un film -->
+        <h1>Supprimer un Film</h1>
+        <form id="removeFilmForm">
+            <label for="filmToRemove">Nom du Film à Supprimer:</label>
+            <br>
+            <input type="text" id="filmToRemove" placeholder="Nom du film à supprimer"><br><br>
+            <button type="button" id="removeFilmButton">Supprimer</button>
+        </form>
+    </div>
+
+    <!-- Bloc à droite pour afficher la liste des films -->
+    <div class="film-list-container">
+        <h1>Liste des Films</h1>
+        
+        <section id="filmList">
+            <!-- Les cartes des films seront ajoutées ici dynamiquement -->
+        </section>
+    </div>
+</div>
+
+<button id="scrollToTopBtn" class="scroll-button">↑</button>
+
+<script src="scripte_ajout_supprimer.js"></script>
+
+
+
+<script>
+    function checkLoginStatus() {
+            fetch('check_session.php')
+                .then(response => response.json())
+                .then(data => {
+                    const loginLogoutContainer = document.getElementById('login-logout-container');
+                    const filmManagementLink = document.getElementById('film-management');
+
+                    if (data.logged_in) {
+                        // Afficher le bouton de déconnexion
+                        loginLogoutContainer.innerHTML = '<a href="index.html" onclick="logoutUser()"><button class="botton">Déconnexion</button></a>';
+
+                        // Afficher le lien "Gestion des films"
+                        filmManagementLink.style.display = 'block';
+                    } else {
+                        // Afficher le bouton de connexion
+                        loginLogoutContainer.innerHTML = '<a href="form.html"><button class="botton">Login</button></a>';
+
+                        // Masquer le lien "Gestion des films"
+                        filmManagementLink.style.display = 'none';
+                    }
+                })
+                .catch(error => console.error('Erreur lors de la vérification de la session:', error));
+        } 
+        document.addEventListener('DOMContentLoaded', checkLoginStatus);
+  </script>
+<script>
+        // LOGOUTUSER
+        function logoutUser() {
+            fetch('logout.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        checkLoginStatus(); // Réactualiser l'état après la déconnexion
+                    }
+                })
+                .catch(error => console.error('Erreur lors de la déconnexion:', error));
+        }
+    
+        // Vérifiez l'état de connexion au chargement
+        document.addEventListener('DOMContentLoaded', checkLoginStatus);
+    
+</script>
+
+</body>
+</html>
+
+

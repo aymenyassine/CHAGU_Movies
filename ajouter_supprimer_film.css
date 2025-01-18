@@ -1,0 +1,269 @@
+/* Réinitialisation des styles de base */
+* {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(img/pg/tv_series_bg.jpg);
+}
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nav-center {
+    margin-left: 120px;
+}
+
+/* Styles pour les éléments de gauche de la barre de navigation */
+.navbar .nav-left {
+    margin-left: 30px;
+}
+
+/* Styles pour le bouton "botona" */
+#botona {
+    color: #fff;
+    border: none;
+    background: none;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#botona:hover {
+    color: #ffeba7;
+}
+
+/* Styles pour les liens de la barre de navigation */
+.navbar .nav-left a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.navbar .nav-left a:hover {
+    color: #ffeba7;
+}
+
+/* Styles pour les liens du centre de la barre de navigation */
+.navbar .nav-center a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.navbar .nav-center a:hover {
+    color: #ffeba7;
+}
+
+/* Styles pour les éléments de droite de la barre de navigation */
+.nav-right {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-right span {
+    cursor: pointer;
+    margin-right: 12px;
+    font-size: 33px;
+    color: #fff;
+}
+
+.nav-right select {
+    background: none;
+    color: #fff;
+    margin-right: 12px;
+    font-size: 23px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.nav-right select:hover {
+    color: #333;
+}
+.botton{
+    --color1: #101519;
+    --color2: #172c46;
+    padding: 0.5em 0.5em;
+    background: linear-gradient(var(--color1), var(--color2));
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    text-shadow: 0 10px 10px #000;
+    border-radius: 20px;
+    border: solid 2px;
+    cursor: pointer;
+}
+.botton:hover {
+    color: #ffeba7;
+}
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Bloc de formulaire à gauche */
+.form-container {
+    width: 45%;
+    height: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #ffeba7;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ffcc00;
+}
+
+/* Bloc de liste des films à droite */
+.film-list-container {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.film-list-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.film-list-container #filmList {
+    margin-left: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .details {
+    padding: 10px;
+}
+
+.card .details h2 {
+    font-size: 16px;
+    color: #333;
+}
+
+.card .details p {
+    font-size: 12px;
+    color: #555;
+}
+
+.card button {
+    padding: 5px 10px;
+    background-color: #ffeba7;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card button:hover {
+    background-color: #ffcc00;
+}
+
+/* Styles supplémentaires pour le formulaire de suppression */
+#removeFilmForm {
+    margin-top: 30px;
+}
+
+#removeFilmForm input,
+#removeFilmForm button {
+    width: 100%;
+}
+
+/* زر التمرير */
+.scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(var(--color1), var(--color2));
+    background-color: #ffeba7;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    z-index: 1000;
+}
+
+/* visibilité le bouton de scroll */
+.scroll-button.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+

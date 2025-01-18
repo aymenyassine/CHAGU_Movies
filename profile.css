@@ -1,0 +1,163 @@
+/* Global Styles */
+body{
+    background-image: url(img/banner_bg01.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+/* Left section of the navbar */
+.nav-left a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffeba7; /* Golden color */
+    font-weight: bold;
+}
+
+/* Center section of the navbar */
+.nav-center a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Hover effect for navbar links */
+.nav-center a:hover {
+    color: #ffeba7;
+}
+
+/* Right section of the navbar */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Material icon for search */
+#login-logout-container .material-symbols-outlined {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+     /* Dark background for the menu */
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1050;
+}
+
+
+
+/* Hide "Gestion des films" link by default */
+#film-management {
+    display: none;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px; ;
+}
+
+/* Left section (User Profile) */
+.left-section {
+    width: 45%;
+    text-align: center;
+}
+
+.left-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffeba7;
+}
+
+/* Right section (Forms) */
+.right-section {
+    width: 45%;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Forms */
+form {
+    margin-bottom: 20px;
+}
+
+form input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    background: #202020;
+    border: 1px solid #ffeba7;
+    color: #fff;
+    border-radius: 5px;
+}
+
+form input[type="file"] {
+    margin-top: 5px;
+}
+
+form label {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* Button container */
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+}
+
+button.button {
+    background-color: #ffeba7;
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+button.button:hover {
+    background-color: #ffc857;
+}
+
+/* Profile */
+.right-section h2 {
+    color: #ffeb94;
+}
+
+.right-section p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Hide forms by default */
+.form-container {
+    display: none;
+}
+
+.global{
+    justify-content: center;
+}

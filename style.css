@@ -1,0 +1,543 @@
+/* Réinitialisation des styles de base */
+* {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* Contenu principal */
+.content {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/banner_bg01.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-center {
+    margin-left: 120px;
+}
+
+/* Styles pour les éléments de gauche de la barre de navigation */
+.navbar .nav-left {
+    margin-left: 10px;
+}
+
+/* Styles pour le bouton "botona" */
+#botona {
+    color: #fff;
+    border: none;
+    background: none;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#botona:hover {
+    color: #ffeba7;
+}
+
+/* Styles pour les liens de la barre de navigation */
+.navbar .nav-left a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.navbar .nav-left a:hover {
+    color: #ffeba7;
+}
+
+/* Styles pour les liens du centre de la barre de navigation */
+.navbar .nav-center a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.navbar .nav-center a:hover,
+#film-management:hover {
+    color: #ffeba7;
+}
+#film-management{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* Styles pour les éléments de droite de la barre de navigation */
+.nav-right {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-right span {
+    cursor: pointer;
+    margin-right: 12px;
+    font-size: 33px;
+    color: #fff;
+}
+
+.nav-right select {
+    background: none;
+    color: #fff;
+    margin-right: 12px;
+    font-size: 23px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.nav-right select:hover {
+    color: #333;
+}
+
+/* Styles pour le bouton "B" */
+.B {
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 130px;
+    font-size: 28px;
+    border-radius: 40px;
+    border: solid #ffeba7 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.B a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.B:hover {
+    background-color: #ffeba7;
+    color: #333;
+}
+/* ajout*/
+.botton{
+    --color1: #101519;
+    --color2: #172c46;
+    padding: 0.5em 0.5em;
+    background: linear-gradient(var(--color1), var(--color2));
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    text-shadow: 0 10px 10px #000;
+    border-radius: 20px;
+    border: solid 2px;
+    cursor: pointer;
+}
+.botton:hover {
+    color: #ffeba7;
+}
+  
+/* Contenu central */
+.center {
+    padding: 250px 30px;
+}
+
+.center h2 {
+    color: #ffeba7;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.center h1 {
+    font-size: 33px;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.center h1 span {
+    color: #ffeba7;
+}
+
+/* Styles pour les paragraphes */
+.p p {
+    background-color: #fff;
+    display: inline-block;
+    padding: 7px 11px;
+    font-weight: 800;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+/* Styles pour les boutons du contenu central */
+.center button {
+    margin-top: 19px;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 160px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: solid #ffeba7 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.center button:hover {
+    background-color: #ffeba7;
+    color: #333;
+}
+
+/* Affiche principale */
+.main-poster {
+    padding: 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url(img/pg/services_bg.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    gap: 20px; /* Ajout de l'espace entre les éléments flexibles */
+}
+#main-poster-2{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Titre */
+.title {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-left: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-left {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffeba7;
+}
+
+.title-left h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+/* Styles pour les éléments de droite du titre */
+.title-r a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 9px;
+    background-color: #21232b;
+    padding: 10px;
+    border-radius: 50px;
+    border: solid #333;
+    transition: 0.5s;
+}
+
+.title-r a:focus {
+    border: solid #ffeba7 2px;
+}
+/*----------------------------------------------------------------------------------------*/
+/* Carte */
+.card {
+    margin-top: 20px;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 500px;
+    border-radius: 14px;
+}
+
+/* Affiches */
+.poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.5s;
+    border-radius: 12px;
+}
+
+/* Liste de données des cartes */
+.dataliste {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1.5em 1.5em 2em;
+    backdrop-filter: blur(16px);
+    background-color: #0000009c;
+    transition: 0.5s;
+}
+
+.card:hover .dataliste {
+    bottom: 0;
+}
+
+.card:hover .poster img {
+    transform: scale(1.2);
+}
+
+.dataliste h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.dataliste p {
+    color: #fff;
+}
+
+/* Étoiles de notation */
+.star {
+    display: inline-block;
+}
+
+.star input {
+    display: none;
+}
+
+.star label {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.star label::before {
+    content: '\2605';
+    font-size: 30px;
+}
+
+.star input:checked ~ label,
+.star label:hover,
+.star label:hover~label {
+    color: #f8b800;
+}
+
+/* Boutons dans la liste de données */
+.dataliste button {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 180px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: solid #ffeba7 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.dataliste button:hover {
+    background-color: #ffeba7;
+    color: #21232b;
+}
+
+/* Section "En direct" */
+.live {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 110px;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/pg/live_bg.jpg);
+    background-position: top;
+}
+
+/* Styles pour la partie gauche de la section "En direct" */
+.live .live-left .p1 {
+    color: #ffeba7;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.live .live-left h1 {
+    font-size: 35px;
+    color: #333;
+}
+
+.live .live-left h1 span {
+    color: #ff6200;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* Styles pour le bouton dans la section "En direct" */
+.live .live-left button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #ffeba7;
+    justify-content: center;
+    border: none;
+    padding: 9px;
+    width: 150px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: solid 3px #ffeba7;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.live .live-left button:hover {
+    background: none;
+    color: #333;
+}
+
+/* Titre2 */
+.title2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title2 .div-h1-p p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffeba7;
+    text-align: center;
+}
+
+.title2 .div-h1-p h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+/* Info */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/pg/footer_bg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.info .logo a {
+    text-decoration: none;
+    color: #ffeba7;
+    font-size: 30px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.info .logo a:hover {
+    color: #ddd;
+}
+
+.info .info-r a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 20px;
+    margin-right: 23px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.info .info-r a:hover {
+    color: #ffeba7;
+}
+
+.info .info-r input {
+    padding: 10px;
+    border: none;
+    background-color: #21232b;
+    border-radius: 40px;
+    width: 200px;
+    border: solid #ffeba7 1px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #21232b;
+}
+
+.footer h3 {
+    color: #ddd;
+}
+
+.footer .div-footer h3 a {
+    text-decoration: none;
+    color: #ffeba7;
+}
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+    .card {
+      width: 300px; /* Réduire la largeur des cartes */
+      height: 400px; /* Réduire la hauteur des cartes */
+    }
+  
+    .dataliste h1 {
+      font-size: 20px; /* Ajuster la taille du texte pour s'adapter à la carte */
+    }
+  
+    .dataliste p {
+      font-size: 14px; /* Réduire la taille de la description */
+    }
+  
+    .poster img {
+      border-radius: 10px; /* Ajuster les coins arrondis */
+    }
+  
+    .dataliste button {
+      font-size: 16px; /* Réduire la taille des boutons */
+      width: 150px; /* Ajuster la largeur des boutons */
+    }
+  
+    .global-card {
+      justify-content: center; /* Centrer les cartes */
+    }
+  }
+#search-results div {
+    transition: background-color 0.2s ease;
+}
+
+#search-results div:hover {
+    background-color: #f0f0f0;
+}
